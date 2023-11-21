@@ -1,0 +1,168 @@
+.yo-nunca-revolution {
+  height: 800px;
+  top: 0px;
+  overflow-y: hidden;
+  background-color: red;
+  min-width: 800px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  p {
+    color: aliceblue;
+    font-size: larger;
+    font-family: Helvetica, sans-serif;
+  }
+}
+
+.logo {
+  top: 100px;
+  position: fixed;
+  width: 200px;
+  /* Estilos para el logo */
+}
+.credits-container {
+  max-width: 800px;
+  height: auto;
+  margin: 100px auto;
+  margin-top: 400px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  h1 {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    color: #3f3f3fde;
+  }
+
+  h2 {
+    margin-bottom: 2px;
+    font-size: large;
+    text-decoration: solid;
+    font-weight: bold;
+    color: #3f3f3fde;
+  }
+  h3 {
+    margin-bottom: 2px;
+    font-size: large;
+    text-decoration: solid;
+    font-weight: bold;
+    color: #3f3f3fde;
+  }
+
+  p {
+    margin: 2px 0;
+    font-size: medium;
+    color: #3f3f3fde;
+  }
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.menu-game {
+  position: fixed;
+  bottom: 60px;
+  display: flex;
+  margin-top: 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10%;
+  overflow: hidden;
+}
+
+.menu-game ul {
+  list-style: none;
+
+  padding: 0;
+  width: 100%;
+}
+
+.menu-game li {
+  width: 100%;
+  height: 33.33%;
+  text-align: center;
+  line-height: 100px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  font-size: larger;
+}
+
+.menu-game li:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+.icon-move {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+/* Estilo para dividir en tres */
+.menu-game li:nth-child(1) {
+  border-bottom: 0.51px solid rgb(97, 97, 97);
+}
+
+.menu-game li:nth-child(2),
+.menu-game li:nth-child(3) {
+  border-top: 0.51px solid rgb(97, 97, 97);
+  border-bottom: 0.51px solid rgb(97, 97, 97);
+}
+
+.yo-nunca-revolution {
+  position: relative;
+  /* Resto de estilos */
+}
+
+.menu {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  /* Estilos para el menú */
+  display: none; /* Inicialmente oculto */
+}
+
+.mostrar-menu {
+  display: block; /* Mostrar el menú */
+}
+
+.pantalla-cubierta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Transparente, ajusta el valor según la opacidad que desees */
+  z-index: 1; /* Por encima del resto del contenido */
+  display: none; /* Inicialmente oculto */
+}
+
+.icono-aspa {
+  position: fixed;
+  font-size: xx-large;
+  top: 60px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  color: white;
+  /* Estilos para el aspa */
+  cursor: pointer;
+}
+
+// /* Otros estilos para las pantallas de cómo jugar y créditos si es necesario */

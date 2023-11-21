@@ -1,0 +1,100 @@
+<!-- <div class="container">
+    <div class="Intro hoverable">
+        <div class="text">
+            <ng-container *ngFor="let item of contenido">
+                <span 
+                  class="hoverable" 
+                  (mouseover)="reproducirAudio(item); mostrarContenido(item)" 
+                  (mouseout)="ocultarContenido()" 
+                  [class.selected]="mostrarContenidoEspecifico === item">
+                  {{ item.palabra }}&nbsp;
+                </span>
+
+            </ng-container>
+            </div>
+        </div>
+    <div *ngIf="mostrarContenidoEspecifico">
+      <img [src]="mostrarContenidoEspecifico.gif" alt="GIF específico" class="gif-background">
+    </div>
+  </div> -->
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-smoothing: antialiased;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            height: 50px;
+            background-color: #b5ff6d;
+            display: flex;
+            align-items: center;
+        }
+
+        .marquee-text-instance {
+            white-space: nowrap;
+            animation-duration: 40s;
+            animation-iteration-count: infinite;
+            animation-name: marquee-slide;
+            animation-timing-function: linear;
+            display: flex;
+            align-items: center; /* Centrar verticalmente el texto en el contenedor */
+        }
+
+        .text-line {
+            margin-right: 20px; /* Ajustar el espaciado entre líneas si es necesario */
+        }
+
+        .star-icon {
+            animation: rotate 40s linear infinite;
+        }
+
+        @keyframes marquee-slide {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <title>Marquee Animation</title>
+</head>
+<body>
+    <div class="marquee-container">
+        <div data-v-e4f827bd="" class="marquee-text-instance" style="/* animation-duration: 3s; */">
+            <span data-v-e4f827bd="" class="text-line">
+                <svg data-v-e4f827bd="" width="20" height="20" viewBox="0 0 138 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="star-icon">
+                    <path d="M137.481 55.8511L101.499 71.8676L135.205 92.3561L96.144 87.9513L115.252 122.779L83.5869 99.1775L82.9315 139.02L67.1371 102.532L46.9327 136.713L51.2886 97.0996L16.9316 116.478L40.2059 84.3684L0.915819 83.7038L36.8975 67.6873L3.19108 47.1987L42.2671 51.6134L23.1451 16.7756L54.8096 40.3773L55.4651 0.534579L71.2594 37.0223L91.4639 2.84184L87.1225 42.465L121.465 23.0765L98.1906 55.1864L137.481 55.8511Z" fill="#000"></path>
+                </svg>
+                Jamila is rebellious - Henk is edgy - Karen is raw - Mohammed is quirky - together they are LIEF
+            </span>
+            <!-- Repite el mismo patrón para otras instancias -->
+        </div>
+    </div>
+</body>
+</html>
+
+  
+  

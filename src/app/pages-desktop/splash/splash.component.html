@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <h1>dragons <span>vs</span> unicorns</h1>
+    <div class="current-status">
+      <img src="{{ unicornTurn ? 'https://assets.codepen.io/2558758/unicorn.png' : 'https://assets.codepen.io/2558758/dragon.png' }}" alt="current-beast" id="currentBeastImg">
+      <p>{{ beastTurn() }}'s turn</p>
+    </div>
+    <div class="board">
+      <div class="cell" *ngFor="let cell of board; let i = index" data-cell (click)="handleCellClick(i)">{{ cell }}</div>
+    </div>
+    <div class="game-end-overlay" *ngIf="gameIsOver">
+      <div class="winning-message" [class.show]="gameIsOver">
+        <p>{{ winningMessageText }}</p>
+      </div>
+      <div class="btn-container">
+        <button class="reset-button" (click)="resetGame()">play again</button>
+      </div>
+    </div>
+  </div>
+  

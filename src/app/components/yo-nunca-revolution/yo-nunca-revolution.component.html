@@ -1,0 +1,134 @@
+<div class="yo-nunca-revolution sm:w-16rem">
+  <div class="icono-aspa" (click)="toggleMostrarMenu()" *ngIf="!mostrarMenu">
+    <!-- <i class="pi pi-times"></i> -->
+    ✖
+  </div>
+
+  <div class="logo">
+    <!-- Aquí va tu logo -->
+    <img
+      src="../../../assets/images/logo_yo_nunca.svg"
+      alt="Logo Yo Nunca Revolution"
+    />
+  </div>
+
+  <!-- Pantalla de juego con frases dinámicas -->
+  <div
+    *ngIf="pantalla === 'jugar' && !mostrarMenu"
+    class="flex align-items-center justify-content-cente flex-column fixed"
+  >
+    <p>{{ fraseActual }}</p>
+    <div class="icon-move">
+      <img
+        class="icon-move"
+        (click)="cambiarFrase()"
+        src="../../../assets/images/boton_circular.svg"
+        alt="Icono cambiar frase"
+      />
+    </div>
+  </div>
+
+  <!-- Menú de opciones -->
+  <div class="menu-game" *ngIf="mostrarMenu">
+    <ul>
+      <li (click)="mostrarPantalla('jugar')" (click)="toggleMostrarMenu()">
+        {{ "yonunca.jugar" | translate }}
+      </li>
+      <li (click)="mostrarPantalla('comoJugar')" (click)="toggleMostrarMenu()">
+        {{ "yonunca.comoJugar" | translate }}
+      </li>
+      <li (click)="mostrarPantalla('creditos')" (click)="toggleMostrarMenu()">
+        {{ "yonunca.creditos" | translate }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Otras pantallas: Cómo Jugar y Créditos -->
+  <div *ngIf="pantalla === 'comoJugar' && !mostrarMenu">
+    <h2>{{ "yonunca.tituloComoJugar" | translate }}</h2>
+    <!-- Contenido de cómo jugar -->
+    <div class="credits-container">
+      <h1>{{ "yonunca.tituloComoJugar" | translate }}</h1>
+
+      <div class="section">
+        <p>
+          {{ "yonunca.instruccionJugar" | translate }}
+        </p>
+      </div>
+
+      <h2 class="mb-2">{{ "yonunca.tituloReglas" | translate }}</h2>
+
+      <div class="section">
+        <h3>{{ "yonunca.objetivoJuego" | translate }}</h3>
+        <p>
+          {{ "yonunca.descripcionObjetivo" | translate }}
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>{{ "yonunca.comoSeJuega" | translate }}</h3>
+        <ol>
+          <li>{{ "yonunca.pasosJuego_1" | translate }}</li>
+          <li>{{ "yonunca.pasosJuego_2" | translate }}</li>
+          <li>{{ "yonunca.pasosJuego_3" | translate }}</li>
+          <li>{{ "yonunca.pasosJuego_4" | translate }}</li>
+        </ol>
+      </div>
+
+      <div class="section">
+        <h3>{{ "yonunca.finDelJuego" | translate }}</h3>
+        <p>
+          {{ "yonunca.descripcionFinJuego" | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="pantalla === 'creditos' && !mostrarMenu">
+    <div class="credits-container">
+      <h1>{{ "yonunca.desarrolloAplicacion_titulo" | translate }}</h1>
+
+      <div class="section">
+        <h2>{{ "yonunca.desarrolloAplicacion_contenido_1" | translate }}</h2>
+        <p>
+          {{ "yonunca.desarrolloAplicacion_contenido_2" | translate }}
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>{{ "yonunca.descargas_titulo" | translate }}</h2>
+        <p>{{ "yonunca.descargas_contenido_1" | translate }}</p>
+        <p>{{ "yonunca.descargas_contenido_2" | translate }}</p>
+        <p>{{ "yonunca.descargas_contenido_3" | translate }}</p>
+        <p>{{ "yonunca.descargas_contenido_4" | translate }}</p>
+      </div>
+
+      <div class="section">
+        <h2>{{ "yonunca.juegoMesa_titulo" | translate }}</h2>
+        <p>{{ "yonunca.juegoMesa_contenido_1" | translate }}</p>
+        <p>{{ "yonunca.juegoMesa_contenido_2" | translate }}</p>
+      </div>
+
+      <div class="section">
+        <h2>{{ "yonunca.agradecimientos_titulo" | translate }}</h2>
+        <p>
+          {{ "yonunca.agradecimientos_contenido_1" | translate }}
+          <a
+            href="{{ 'yonunca.agradecimientos_link_1' | translate }}"
+            alt="Link a agencia de marketing online en Tomelloso"
+            target="_blank"
+            >{{ "yonunca.agradecimientos_link_1" | translate }}</a
+          >
+        </p>
+        <p>
+          <a
+            href="{{ 'yonunca.agradecimientos_contenido_2' | translate }}"
+            target="_blank"
+            >{{ "yonunca.agradecimientos_contenido_2" | translate }}</a
+          >
+        </p>
+      </div>
+    </div>
+    <!-- Contenido de créditos -->
+  </div>
+</div>

@@ -1,0 +1,102 @@
+.container {
+  position: absolute;
+}
+
+.gif-background {
+  width: 100%;
+  height: 100vh; /* Ocupa el 100% del height de la ventana */
+  object-fit: cover;
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Ajusta el color del texto para que sea visible en la imagen */
+  font-size: 20px; /* Ajusta el tamaño del texto según sea necesario */
+  text-align: center;
+}
+
+.hoverable {
+  cursor: url('../../../assets/cursor.png') ,auto;
+ top: 0px;
+  position: absolute;
+  z-index: 3;
+}
+
+
+
+.Intro .text {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .Intro .text>span {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .Intro .text>span:before {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    bottom: 3px;
+    width: calc(100% - 0.3em);
+    height: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(#ff71b1), color-stop(33%, #0ff), color-stop(66%, #42fa79), to(#fff36d));
+    background: linear-gradient(90deg, #ff71b1 0, #0ff 33%, #42fa79 66%, #fff36d);
+    content: "";
+    transform: scaleY(.9) translateX(-100%);
+    transition: transform 0.5s;
+  }
+  
+  .Intro .text>span:hover:before {
+    opacity: 1;
+    transform: scaleY(.9) translateX(0);
+  }
+  
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.about-hero .split-word {
+    align-items: center;
+    display: flex;
+    font-family: ABC-Whyte-Book;
+    font-style: normal;
+}
+
+.split-letter, .split-word {
+    display: inline-block;
+    opacity: .001;
+    will-change: transform;
+}
+
+.about-hero .full-height-text-block-content {
+    font-size: calc(11200vw/var(--base-width));
+    line-height: calc(13500vw/var(--base-width));
+}
+
+.full-height-text-block-content[data-v-f2224f1f] {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    font-family: Jazmin;
+    font-size: calc(6000vw/var(--base-width));
+    font-weight: 250;
+    height: 100%;
+    justify-content: center;
+    line-height: calc(8000vw/var(--base-width));
+    text-align: center;
+    text-transform: uppercase;
+}
+
+body {
+    font-family: ABC-Whyte-Book;
+}

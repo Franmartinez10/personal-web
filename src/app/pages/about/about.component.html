@@ -1,0 +1,61 @@
+<div class="page-content " *ngIf="datos">
+                
+    <div class="card card-style " style="height: 280px;" data-card-height="300">
+        <div class="card-center text-center">
+            <h1 class="color-black text-center font-22 pt-3 mb-0">Hola soy </h1>
+            <h1 class="color-black font-40 font-900 pb-4">{{datos.attributes.titulo}}</h1>
+            <p class="color-black font-13 opacity-70 px-4 mb-4">
+                {{datos.attributes.descripcion}}
+            </p>
+        </div>
+        <div class="card-overlay bg-black opacity-85 d-flex align-items-top"><img class="w-100 h-100 object-fit-cover" src="http://45.147.251.201:1337/{{datos.attributes.foto.data.attributes.url}}"></div>
+    </div>
+    <!-- <a href="scripts/vcard.vcf" class="default-link btn btn-center-l bg-red-dark font-700 text-uppercase btn-m under-slider-btn mb-4 rounded-xl" target="_blank">Purchase Today</a> -->
+
+    
+    <div class="card card-style">
+        <div class="content mt-3 mb-2">
+            <h1 class="vcard-title font-700 text-capitalize border-blue-dark">Telefono</h1>
+            <div class="vcard-field"><strong>Movil:</strong><a href="tel:{{datos.attributes.telephone}}">{{datos.attributes.telephone}}</a><i class="fa fa-phone color-green1-dark"></i></div>
+            <!-- <div class="vcard-field"><strong>Office</strong><a href="tel:+2 234 567 890">+2 234 567 890</a><i class="fa fa-suitcase color-brown1-dark"></i></div>
+            <div class="vcard-field border-0"><strong>Personal</strong><a href="tel:+3 234 567 890">+3 234 567 890</a><i class="fa fa-user color-red2-dark"></i></div> -->
+        </div>
+    </div>
+    <div class="card card-style">
+        <div class="content mt-3 mb-2">
+            <h1 class="vcard-title font-700 text-capitalize border-red-dark">Direccion</h1>
+            <div class="vcard-field line-height-l pb-3 pt-4 border-0"><strong>Casa</strong>{{datos.attributes.direccion}}<i class="fa fa-map-marker color-blue2-dark mt-3"></i></div>
+        </div>
+    </div>
+    <div class="card card-style">
+        <div class="content mt-3 mb-2">
+            <h1 class="vcard-title font-700 text-capitalize border-green-dark">Email</h1>
+            <div class="vcard-field"><strong>Home</strong><a href="mailto:home@domain.com">home@domain.com</a><i class="fa fa-home color-green1-dark"></i></div>
+            <div class="vcard-field"><strong>Office</strong><a href="mailto:office@domain.com">office@domain.com</a><i class="fa fa-suitcase color-brown1-dark"></i></div>
+            <div class="vcard-field border-0"><strong>Personal</strong><a href="mailto:personal@domain.com">personal@domain.com</a><i class="fa fa-user color-red2-dark"></i></div>
+        </div>
+    </div>
+    <div class="card card-style">
+        <div class="content mt-3 mb-2">
+            <h1 class="vcard-title font-700 text-capitalize border-yellow-dark">Website</h1>
+            <div class="vcard-field border-0"><strong>URL</strong><a class="default-link" href="https://www.enableds.com">www.domain.com</a><i class="fa fa-globe"></i></div>
+        </div>
+    </div>
+    <div class="card card-style">
+        <div class="content mt-3 mb-2">
+            <h1 class="vcard-title font-700 text-capitalize border-orange-dark">Social</h1>
+            <div class="vcard-field"><strong>Facebook</strong><a href="www.enableds.com">karla.black</a><i class="fab fa-facebook color-facebook"></i></div>
+            <div class="vcard-field"><strong>Twitter</strong><a href="www.enableds.com">@karla.black</a><i class="fab fa-twitter color-twitter"></i></div>
+            <div class="vcard-field border-0"><strong>Instagram</strong><a href="www.enableds.com">@karla.black</a><i class="fab fa-instagram color-instagram"></i></div>
+        </div>
+    </div>
+    
+    <a href="scripts/vcard.vcf" class="default-link shadow-xxl btn btn-full btn-margins rounded-m btn-l font-12 font-700 text-uppercase mb-4 bg-blue-dark color-white">Download V-Card</a>
+
+    <!-- Loading Global Footer-->
+    <div data-menu-load="menu-footer.html"></div>
+    
+</div>
+<div class="page-bg"><div></div></div>
+
+

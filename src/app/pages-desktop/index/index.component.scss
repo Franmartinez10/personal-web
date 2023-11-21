@@ -1,0 +1,553 @@
+:host ::ng-deep {
+  /* Estilos para la ventana Acerca de este Mac */
+
+  p-contextmenu {
+    ul {
+      padding-left: 0rem;
+    }
+    .p-menu-list .p-menuitem {
+      margin: 0px;
+      padding: 0px;
+      height: 1px; /* Define la altura de la barra */
+      background-color: #000; /* Color de la barra */
+      margin: 20px 0; /* Ajusta el margen superior e inferior */
+    }
+    .p-contextmenu .p-menuitem > .p-menuitem-content .p-menuitem-link {
+      color: #2a2e31;
+      padding: 0.4rem 4.25rem 0.4rem 1.3rem;
+      -webkit-user-select: none;
+      user-select: none;
+      white-space: nowrap;
+      font-size: small;
+    }
+    .p-contextmenu {
+      width: auto;
+      background-color: rgba(255, 255, 255, 0.936);
+    }
+    .menu-separator {
+      border: none;
+      height: 1px;
+      background-color: #ccc;
+      margin: 4px 0;
+    }
+  }
+  .dialog-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+
+  //CHAT SIRI
+  /* ... estilos previos ... */
+
+  .assistant-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .image {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
+  }
+  .disabled {
+    opacity: 0.5; /* Reducción de la opacidad */
+    /* Otros estilos para indicar deshabilitado */
+  }
+
+  .watermark {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5); /* Color de la marca de agua */
+    pointer-events: none; /* Evita que el texto interfiera con el evento de clic */
+    /* Otras propiedades de estilo para la marca de agua */
+  }
+
+  .assistant-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .assistant-icon img {
+    width: 100px; /* Ajusta el tamaño de la imagen según necesites */
+    height: 100px;
+  }
+
+  .assistant-dialog {
+    position: fixed;
+    bottom: 90px; /* Posición debajo del ícono */
+    right: 20px;
+    z-index: 999;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .assistant-dialog.active {
+    display: block;
+  }
+
+  .assistant-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+  }
+
+  .assistant-close {
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .assistant-options {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .option {
+    padding: 8px 0;
+    cursor: pointer;
+  }
+
+  /* ... estilos adicionales ... */
+
+  /* Otras reglas de estilo según sea necesario */
+
+  .dialog {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .maximized-dialog {
+    width: 100vw !important;
+    height: 800px !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+    .p-dialog p-dialog {
+      height: 100vh;
+    }
+  }
+
+  .appleMenu {
+    .p-menubar .p-menubar-root-list .p-icon-wrapper,
+    .p-menubar .p-submenu-list .p-menuitem-link .p-icon-wrapper {
+      margin-left: auto;
+      display: none;
+      border: 0px;
+      font-size: large;
+    }
+  }
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .dock-window {
+    width: 100%;
+    height: 95vh;
+    position: relative;
+    background-image: url("./../../../../src/assets/images/wallpapers/Fran_Martinez_Torres.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .p-dock {
+    z-index: 1000;
+  }
+  .p-dialog .p-dialog-header {
+    border-bottom: 0 none;
+    background: #ffffff;
+    color: #343a40;
+    padding: 0;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+  // .macos-title-bar {
+  //     background-color: #2a2a2a;
+  //     height: 40px;
+  //     width: 100%;
+  //     border-top-left-radius: 5px;
+  //     border-top-right-radius: 5px;
+  //     display: flex;
+  //     align-items: center;
+  //     padding: 0 12px;
+  //   }
+
+  //   .macos-buttons {
+  //     display: flex;
+  //     gap: 10px;
+  //   }
+
+  //   .macos-button {
+  //     width: 12px;
+  //     height: 12px;
+  //     border-radius: 50%;
+  //     display: block;
+  //     border: 2px solid transparent;
+  //     transition: all 0.3s ease;
+  //   }
+
+  //   .close {
+  //     background-color: #ff4d4d; /* Rojo */
+  //   }
+
+  //   .minimize {
+  //     background-color: #ffd700; /* Amarillo */
+  //   }
+
+  //   .maximize {
+  //     background-color: #7fff00; /* Verde */
+  //   }
+
+  //   .macos-title {
+  //     margin-left: 10px;
+  //     font-size: 16px;
+  //     color: #fff;
+  //     text-transform: uppercase;
+  //     letter-spacing: 1px;
+  //     font-family: 'Arial', sans-serif;
+  //   }
+
+  .macos-title-bar {
+    background-color: #f7f7f7;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+  }
+
+  .macos-buttons {
+    display: flex;
+    gap: 6px;
+  }
+
+  .macos-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .close {
+    background-color: #ff5f56; /* Rojo */
+  }
+
+  .minimize {
+    background-color: #ffbd2e; /* Amarillo */
+  }
+
+  .maximize {
+    background-color: #27c93f; /* Verde */
+  }
+
+  .macos-title {
+    padding: 4px;
+    margin-left: 20px;
+    font-size: 12px;
+  }
+
+  /* Estilos adicionales según sea necesario */
+
+  .margin-sides {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .p-menubar {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 0;
+
+    .p-menuitem:first-child {
+      font-weight: bold;
+      padding: 0 1rem;
+    }
+
+    .p-menuitem-link {
+      padding: 0.5rem 0.75rem;
+    }
+
+    .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+      padding: 0.5rem 0.75rem;
+
+      > .p-submenu-icon {
+        display: none;
+      }
+    }
+
+    .p-menubar-end {
+      span,
+      i {
+        padding: 0 0.75rem;
+      }
+    }
+  }
+}
+
+.desktop .icon-desktop {
+  padding: 4px 8px 4px 8px;
+  border: 2px solid transparent;
+  text-align: center;
+  margin-bottom: 32px;
+  display: flex;
+}
+.icons-dekstop {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.icon-desktop {
+  display: flex;
+  padding: 20px;
+  margin: 30px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100px;
+}
+
+.desktop .icon-desktop a {
+  display: block;
+  text-decoration: none;
+  cursor: default;
+}
+
+.desktop .icon-desktop img {
+  height: auto;
+  width: 48px;
+}
+.desktop .icon-desktop span {
+  display: block;
+  color: white;
+  font-size: 11px;
+  text-align: center;
+}
+
+.desktop .icon-desktop:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.desktop .icon-desktop:first-child {
+  margin-top: 5px;
+}
+
+/* Cambio de nombre de clase */
+.folder .icon-folder {
+  padding: 4px 8px 4px 8px;
+  border: 2px solid transparent;
+  text-align: center;
+  margin-bottom: 32px;
+  display: flex;
+}
+
+.icons-folder {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Estilos para icon-folder */
+.icon-folder {
+  display: flex;
+  padding: 20px;
+  margin: 30px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100px;
+  color: #333; /* Cambia el color del texto a blanco */
+}
+.folder {
+  margin: 20px;
+}
+
+/* Ajustes para la alineación del ícono */
+.icon-folder img {
+  height: auto;
+  width: 48px;
+  order: -1; /* Cambia el orden para situar el ícono a la izquierda */
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
+}
+
+.folder .icon-folder a {
+  display: block;
+  text-decoration: none;
+  cursor: default;
+}
+
+.folder .icon-folder span {
+  display: block;
+  font-size: 13px;
+  text-align: center;
+}
+
+.folder .icon-folder:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.folder .icon-folder:first-child {
+  margin-top: 5px;
+}
+
+.dark-tooltip {
+  .p-tooltip {
+    .p-tooltip-arrow {
+      border-top-color: var(--surface-900);
+    }
+
+    .p-tooltip-text {
+      background-color: var(--surface-900);
+    }
+  }
+}
+
+::ng-deep .about-me-dialog .ui-dialog-content {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80% !important;
+  max-width: 400px !important;
+  margin: 0 auto !important;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px; /* Aumenté el tamaño de fuente para mejor legibilidad */
+  color: #333;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  .education p {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+::ng-deep .education-info {
+  margin: 10px; /* Reducir el espacio entre párrafos de formación */
+}
+
+::ng-deep .contact-info .contact-detail strong {
+  font-weight: bold; /* Hacer el texto de contacto en negrita */
+  margin-right: 5px; /* Añadir espacio entre el icono y el texto */
+}
+::ng-deep .about-me-dialog .about-me-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.profile-picture {
+  padding: 20px;
+}
+
+.about-me-content .about-me-header {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+}
+
+::ng-deep .about-me-dialog .about-me-header img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+::ng-deep .about-me-dialog .profile-picture img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  .about-me-dialog .about-me-content .profile-picture img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+:host ::ng-deep .p-dropdown .p-dropdown-trigger {
+  display: none; /* Oculta la flecha */
+}
+:host ::ng-deep .p-dropdown .p-dropdown-trigger .p-dropdown-label {
+  display: none; /* Oculta el texto predeterminado */
+}
+
+:host ::ng-deep .p-dropdown .p-dropdown-trigger .p-dropdown-trigger-icon {
+  padding-left: 0; /* Elimina el padding izquierdo */
+}
+
+:host ::ng-deep .p-dropdown {
+  background: transparent;
+  border: none; /* Elimina el borde del p-dropdown */
+}
+::ng-deep ul {
+  padding-left: 0 !important;
+}
+::ng-deep .about-me-dialog .about-me-content h2 {
+  font-size: 16px; /* Aumenté el tamaño de los títulos */
+  margin-bottom: 10px;
+  color: #666;
+  font-weight: bold; /* Añadí negrita para los títulos */
+}
+
+::ng-deep .about-me-dialog .about-me-content p {
+  margin-bottom: 8px; /* Ajusté el espacio entre párrafos */
+  color: #666;
+}
+
+::ng-deep .about-me-dialog .about-me-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+::ng-deep .about-me-dialog .about-me-content a:hover {
+  text-decoration: underline;
+}

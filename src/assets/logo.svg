@@ -1,0 +1,6 @@
+<!-- Ejemplo: logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="50" fill="#ffffff"/>
+  <!-- Agrega aquí el contenido del logo (puede ser un texto, otra imagen, etc.) -->
+  <text x="50%" y="50%" font-size="20" fill="#e92e27" text-anchor="middle">Yo nunca</text>
+</svg>

@@ -1,0 +1,21 @@
+<div class="col-sm-7">
+    <div class="event" *ngFor="let work of workHistory">
+      <h2>WORK HISTORY</h2>
+      <!-- Your HTML structure for displaying work history data -->
+      <h3>{{ work.startDate }} - {{ work.endDate }}</h3>
+      <h4>{{ work.position }}</h4>
+      <h5>{{ work.company }}</h5>
+      <p>{{ work.description }}</p>
+    </div>
+  
+    <div class="event" *ngFor="let edu of education">
+      <h2>EDUCATION</h2>
+      <!-- Your HTML structure for displaying education history data -->
+      <h3>{{ edu.year }}</h3>
+      <h4>{{ edu.fieldOfStudy }}</h4>
+      <h5>{{ edu.institution }}</h5>
+      <p>{{ edu.description }}</p>
+    </div>
+    <p><a class="button" href="#"><i class="pe-7s-download"></i>Download CV</a></p>
+  </div>
+  
