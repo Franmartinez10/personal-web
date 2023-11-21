@@ -44,6 +44,14 @@ import { ContextMenuModule } from 'primeng/contextmenu';
 import { GoogleComponent } from './components/google/google.component';
 import { YoNuncaRevolutionComponent } from './components/yo-nunca-revolution/yo-nunca-revolution.component';
 import { DropdownModule } from 'primeng/dropdown';
+import { DeviceDetectorService } from 'ngx-device-detector';
+import { DeviceCheckComponent } from './components/device-check/device-check.component';
+import { ErrorSearchComponent } from './components/error-search/error-search.component';
+import { IphonescreenComponent } from './pages/iphonescreen/iphonescreen.component';
+import { IphoneSafariComponent } from './pages/iphone-safari/iphone-safari.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { MobileRouteComponent } from './components/mobile-route/mobile-route.component';
+import { DesktopRouteComponent } from './components/desktop-route/desktop-route.component';
 
 export function HttpLoadFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -67,6 +75,13 @@ export function HttpLoadFactory(http: HttpClient) {
     IndexComponent,
     GoogleComponent,
     YoNuncaRevolutionComponent,
+    DeviceCheckComponent,
+    ErrorSearchComponent,
+    IphonescreenComponent,
+    IphoneSafariComponent,
+    GalleryComponent,
+    MobileRouteComponent,
+    DesktopRouteComponent,
   ],
   imports: [
     CommonModule,
@@ -96,7 +111,7 @@ export function HttpLoadFactory(http: HttpClient) {
     }),
     InlineSVGModule.forRoot(),
   ],
-  providers: [MessageService, PhotoService, NodeService],
+  providers: [MessageService, PhotoService, NodeService, DeviceDetectorService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

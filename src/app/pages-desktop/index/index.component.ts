@@ -97,6 +97,7 @@ export class IndexComponent {
   translated: any = {};
   voices: SpeechSynthesisVoice[] = [];
   selectedLanguage: any;
+  burnComponent: boolean = false;
 
   // CONSTRUCTOR
 
@@ -111,6 +112,7 @@ export class IndexComponent {
     private elementRef: ElementRef,
     private translateService: TranslateService,
     private appService: AppService,
+    private router: Router,
   ) {}
 
   // Initialization logic in ngOnInit method
@@ -127,7 +129,6 @@ export class IndexComponent {
     });
     this.translateService.get('index', []).subscribe((data: any) => {
       this.translated = data;
-      console.log(data);
       this.items = [
         {
           label: this.translated.contacto,
@@ -279,6 +280,9 @@ export class IndexComponent {
           showDelay: 1000,
         },
         icon: 'https://primefaces.org/cdn/primeng/images/dock/github.svg',
+        command: () => {
+          window.open('https://github.com/Franmartinez10', '_blank');
+        },
       },
       {
         label: 'Linkedin',
@@ -529,14 +533,12 @@ export class IndexComponent {
 
   /// LANGUAJE MODIFICATION
   async changeLanguage(e: any) {
-    console.log(e);
     this.appService.chooseLanguaje(e.value.code);
     this.translateService.get('siro2', []).subscribe((data: any) => {
       this.currentOptions = data;
     });
     this.translateService.get('index', []).subscribe((data: any) => {
       this.translated = data;
-      console.log(data);
       this.items = [
         {
           label: this.translated.contacto,
@@ -582,7 +584,26 @@ export class IndexComponent {
       ];
     });
   }
+  startAnimation(): void {
+    // Agrega la clase para activar la animación de ardor
+    const fireElement = document.querySelector('.burn-animation');
+    if (fireElement) {
+      fireElement.classList.add('burn-animation');
+    }
 
+    // Agrega la clase para activar la animación de desintegración
+    const disintegrationMask = document.querySelector('.disintegration-mask');
+    if (disintegrationMask) {
+      disintegrationMask.classList.add('disintegrate');
+    }
+  }
+
+  iniciarArdor() {
+    this.burnComponent = true;
+    setTimeout(() => {
+      // Aquí podrías reiniciar el componente o hacer alguna otra acción después de la animación
+    }, 1500);
+  }
   commandHandler(text: any) {
     let response;
     let argsIndex = text.indexOf(' ');
@@ -769,7 +790,6 @@ export class IndexComponent {
     const voicesPromise = new Promise<SpeechSynthesisVoice[]>((resolve) => {
       synth.onvoiceschanged = () => {
         const voices = synth.getVoices();
-        console.log(voices);
 
         resolve(voices);
       };

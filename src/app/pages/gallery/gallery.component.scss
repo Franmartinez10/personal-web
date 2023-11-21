@@ -1,0 +1,113 @@
+/* Estilos generales */
+.gallery {
+  margin: 10px 0px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 10px;
+}
+
+.thumbnail-image {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin deformarse */
+}
+.album-image {
+  width: 170px;
+  height: 170px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin deformarse */
+}
+.album-title {
+  color: rgb(31, 31, 31);
+  font-weight: bold;
+}
+
+.thumbnail {
+  cursor: pointer;
+}
+
+.full-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  position: fixed;
+  bottom: 0px;
+  cursor: pointer;
+}
+
+.full-image {
+  max-width: 90%;
+  max-height: 90vh;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+.bottom-menu {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-direction: row;
+  background-color: rgba(236, 236, 236, 0.984);
+  align-items: flex-start;
+  position: fixed;
+  bottom: -1px;
+  /* border-radius: 10px; */
+}
+.menu-option {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 30px;
+}
+.menu-option svg {
+  //   width: 30px;
+  height: 30px;
+}
+.menu-option span {
+  font-size: smaller;
+}
+
+.image-transition {
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-enter {
+  transform: translateX(100%);
+}
+
+.image-leave {
+  transform: translateX(-100%);
+}

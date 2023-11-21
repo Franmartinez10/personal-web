@@ -1,0 +1,272 @@
+{
+  "volver": "Returne",
+
+  "index": {
+    "lang": "fr_FR",
+    "photo": "Photos",
+    "wallpaper": "Changer le fond d'écran",
+    "contacto": "Comment nous contacter",
+    "activar": "Activer",
+    "cancelar": "Annuler",
+    "fullscreen": "Plein écran",
+    "aboutMeTitle": "À propos de Fran Martínez",
+    "personalInfo": {
+      "linkedin": "Votre profil LinkedIn",
+      "github": "Votre profil GitHub",
+      "behance": "Votre profil Behance",
+      "info": "Apprends à me connaître"
+    },
+    "studies": "Vous pouvez répertorier vos études académiques ici.",
+    "contactInfo": "Vous pouvez ajouter votre adresse e-mail, numéro de téléphone, etc.",
+    "ayuda": "Comment puis-je vous aider ?",
+    "albums": "Albums",
+    "aboutMeDetails": {
+      "curriculum_pdf": "../../../assets/pdf/curriculum_Francisco_Martinez_fr-2023.pdf",
+      "linkedin": "https://www.linkedin.com/in/fran-martinez-torres-04008551/",
+      "behance": "https://www.behance.net/fran_martinez10",
+      "github": "https://github.com/Franmartinez10",
+      "education": [
+        {
+          "institution": "UNIVERSITE CEU SAN PABLO, MADRID, ESPAÑA",
+          "duration": "2014 - 2019",
+          "degree": "Grados en Comunicación Digital, RP y Publicidad",
+          "description": "Estudios en comunicación Digital orientados a desarrollar las competencias necesarias para la gestión integral de un proyecto o producto digital, así como los fundamentos de programación, BBDD y las diferentes tecnologías y disciplinas necesarias para liderar un proyecto tecnológico."
+        },
+        {
+          "institution": "HANZE UNIVERSITY OF APPLIED SCIENCES - GRONINGEN, PAÍSES BAJOS",
+          "duration": "SEP 2017 - JUN 2018",
+          "degree": "Master: The Future of Technology and Society",
+          "description": "Orientado a la creación de y gestión de proyectos digitales. Nuestro proyecto: Un prototipo innovador para gestionar la movilidad y el transporte de la sociedad del futuro (Países bajos en 2050) y presentación a través del uso de tecnologías VR y AR."
+        },
+        {
+          "institution": "CODENOTCH, MADRID, ESPAÑA",
+          "duration": "FEB - MAY 2021",
+          "degree": "Boot Camp  web developper full stack",
+          "description": "Programa Bootcamp orientado al desarrollo de aplicaciones en JavaScript y typescript, Angular e Ionic. Microservicios en Node.js. Creación y gestión de BBDD en MondoDB y MySQL. Despliegue de aplicaciones e integración continua, AWS."
+        }
+      ],
+      "contactDetails": {
+        "email": "fran.martinez.torres@gmail.com",
+        "phone": "+34 616 351 352",
+        "location": "Madrid, España"
+      }
+    }
+  },
+  "phrases": [
+    "Je n'ai jamais fait semblant de dormir pour éviter une situation inconfortable.",
+    "Je n'ai jamais envoyé de message par erreur à mon ex.",
+    "Je ne suis jamais entré quelque part sans payer.",
+    "Je n'ai jamais fait une blague téléphonique.",
+    "Je ne suis jamais parti d'un endroit sans payer au restaurant.",
+    "Je n'ai jamais triché pendant un examen.",
+    "Je n'ai jamais embrassé quelqu'un juste pour m'amuser.",
+    "Je n'ai jamais fait semblant d'être quelqu'un d'autre sur les réseaux sociaux.",
+    "Je n'ai jamais essayé un costume provocateur juste pour m'amuser.",
+    "Je n'ai jamais joué à vérité ou conséquence et choisi conséquence.",
+    "Je n'ai jamais cassé quelque chose et fait semblant que ce n'était pas moi.",
+    "Je ne suis jamais sorti sans prévenir mes parents.",
+    "Je n'ai jamais menti sur mon âge.",
+    "Je n'ai jamais essayé de me faufiler lors d'un concert.",
+    "Je n'ai jamais utilisé la brosse à dents de quelqu'un d'autre sans permission.",
+    "Je n'ai jamais caché quelque chose dans ma chambre pour qu'on ne le trouve pas.",
+    "Je n'ai jamais utilisé l'excuse 'je l'ai oublié' quand ce n'était pas vrai.",
+    "Je n'ai jamais envoyé de message osé par erreur à un membre de ma famille.",
+    "Je n'ai jamais utilisé de fausse identité.",
+    "Je ne suis jamais sorti avec quelqu'un juste par ennui.",
+    "Je n'ai jamais fait une farce et accusé quelqu'un d'autre.",
+    "Je ne suis jamais sorti d'un film parce que je m'ennuyais.",
+    "Je n'ai jamais flirté pour obtenir quelque chose gratuitement.",
+    "Je n'ai jamais fait une blague de mauvais goût.",
+    "Je n'ai jamais espionné le téléphone de mon partenaire.",
+    "Je n'ai jamais dit 'je t'aime' juste pour obtenir quelque chose.",
+    "Je n'ai jamais porté le même sous-vêtement deux jours d'affilée.",
+    "Je n'ai jamais fait semblant d'être malade pour éviter d'aller travailler ou à l'école.",
+    "Je ne suis jamais sorti avec quelqu'un juste par intérêt.",
+    "Je n'ai jamais inventé une urgence pour sortir d'une situation inconfortable.",
+    "Je n'ai jamais mangé de la nourriture d'une assiette cassée."
+  ],
+
+  "yonunca": {
+    "jugar": "Jouer",
+    "comoJugar": "Comment Jouer",
+    "creditos": "Crédits",
+    "tituloComoJugar": "Comment Jouer",
+    "instruccionJugar": "Il suffit d'appuyer sur le bouton pour avancer dans la phrase et jouer au jeu le plus amusant, le Yo Nunca.",
+    "tituloReglas": "Règles du Jeu Yo Nunca",
+    "objetivoJuego": "Objectif du Jeu :",
+    "descripcionObjetivo": "Le jeu consiste à dire des choses que vous n'avez jamais faites. Si quelqu'un dans le groupe l'a fait, il doit boire un coup ou effectuer une action prédéfinie.",
+    "comoSeJuega": "Comment Jouer :",
+    "pasosJuego_1": "Les joueurs s'assoient en cercle ou autour d'une table.",
+    "pasosJuego_2": "Un des joueurs commence en disant quelque chose qu'il n'a jamais fait en utilisant la phrase 'Je n'ai jamais...' (par exemple, 'Je n'ai jamais sauté en parachute').",
+    "pasosJuego_3": "Les joueurs qui ont fait cette action doivent boire un coup ou effectuer une action convenu au préalable.",
+    "pasosJuego_4": "Le joueur suivant continue avec une autre déclaration de 'Je n'ai jamais...' et ainsi de suite.",
+    "finDelJuego": "Fin du Jeu :",
+    "descripcionFinJuego": "Le jeu peut se terminer lorsque les joueurs le souhaitent ou lorsque tout le monde s'amuse suffisamment.",
+    "desarrolloAplicacion_titulo": "Développement de l'Application",
+    "desarrolloAplicacion_contenido_1": "Conception et Développement de l'Application Yo Nunca",
+    "desarrolloAplicacion_contenido_2": "Francisco Martínez Torres",
+    "descargas_titulo": "Téléchargements",
+    "descargas_contenido_1": "Plus de 650 000 Téléchargements sur les Plateformes Mobiles",
+    "descargas_contenido_2": "- iOS",
+    "descargas_contenido_3": "- Android",
+    "descargas_contenido_4": "- Windows Phone",
+    "juegoMesa_titulo": "Jeu de Société 'Yo Nunca Revolution'",
+    "juegoMesa_contenido_1": "Lancement Réussi en Octobre 2021",
+    "juegoMesa_contenido_2": "Plus de 15 000 Exemplaires Vendus",
+    "agradecimientos_titulo": "Remerciements Spéciaux",
+    "agradecimientos_contenido_1": "Remerciements à ",
+    "agradecimientos_contenido_2": "https://juegostetrakis.com/",
+    "agradecimientos_link_1": "https://youragency.es/"
+  },
+
+  "siro2": [
+    {
+      "text": "Qu'est-ce que tu peux faire ?",
+      "speech": "Oh, plein de choses. Tu vas voir. Peux-tu m'aider en me trouvant un bon travail ?",
+      "subResponses": [
+        {
+          "text": "Informations sur les services",
+          "speech": "Nous proposons également une variété de services de développement web et de communication digitale.",
+          "subResponses": [
+            {
+              "text": "Services les plus demandés",
+              "speech": "Parmi mes services les plus demandés, il y a :",
+              "subResponses": [
+                {
+                  "text": "Développement d'applications web",
+                  "speech": "Avec plus de 3 ans d'expérience dans le développement d'applications web utilisant les frameworks les plus avancés.",
+                  "subResponses": [
+                    {
+                      "text": "Comment ça fonctionne ?",
+                      "speech": "Vous pouvez me contacter par e-mail, par téléphone ou via LinkedIn.",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "Quelles technologies maîtrises-tu ?",
+                      "speech": "Je suis spécialisé en Angular, Ionic, React et Flutter.",
+                      "subResponses": []
+                    }
+                  ]
+                },
+                {
+                  "text": "Communication et marketing digital",
+                  "speech": "Mes 5 années d'études universitaires me permettent d'avoir une vision très large et professionnelle de différents services de communication et de marketing digital.",
+                  "subResponses": [
+                    {
+                      "text": "Qu'est-ce que cela inclut ?",
+                      "speech": "Vous pouvez consulter tous mes travaux dans mon portfolio de bijains.",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "Travaux réalisés",
+                      "speech": "Vous pouvez consulter tous mes travaux dans mon portfolio de bijains.",
+                      "subResponses": []
+                    }
+                  ]
+                },
+                {
+                  "text": "Développement Backend et backops",
+                  "speech": "Nous proposons un service de développement backend utilisant les derniers outils.",
+                  "subResponses": [
+                    {
+                      "text": "Comment me contacter ?",
+                      "speech": "Vous pouvez me contacter par e-mail, par téléphone ou via LinkedIn.",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "Horaires d'ouverture",
+                      "speech": "Envoyez-moi un message et je verrai quand vous répondre, haha, je plaisante. Vous pouvez me contacter par téléphone pendant les heures de bureau.",
+                      "subResponses": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Présente-toi",
+          "speech": "Salut ! Je suis Fran Martinez, votre assistant virtuel et aussi le créateur de cette page.",
+          "subResponses": [
+            {
+              "text": "Comment puis-je t'aider ?",
+              "speech": "Je suis là pour répondre aux questions ou vous aider avec ce dont vous avez besoin. En quoi puis-je vous assister aujourd'hui ?",
+              "subResponses": [
+                {
+                  "text": "Comment s'est passé ta journée ?",
+                  "speech": "Ma journée est fantastique ! Merci de demander. Et toi ?",
+                  "subResponses": [
+                    {
+                      "text": "La mienne aussi est super !",
+                      "speech": "Je suis content de l'entendre ! Y a-t-il quelque chose de spécifique pour lequel vous avez besoin d'aide ?",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "Pas mal, merci de demander",
+                      "speech": "J'espère que ça va s'améliorer ! En quoi puis-je vous aider aujourd'hui ?",
+                      "subResponses": []
+                    }
+                  ]
+                },
+                {
+                  "text": "Raconte-moi quelque chose de drôle",
+                  "speech": "Bien sûr ! Saviez-vous que les programmeurs ne mangent pas de crème glacée car elle fond toujours ? ",
+                  "subResponses": [
+                    {
+                      "text": "Haha, c'est bon ça",
+                      "speech": "Je suis content que ça vous ait fait sourire ! En quoi puis-je vous aider d'autre ?",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "Tu devrais améliorer tes blagues",
+                      "speech": "Je vais essayer ! Mais pour l'instant, en quoi puis-je vous aider ?",
+                      "subResponses": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Fais l'éloge de mon code",
+              "speech": "Mon code est comme une œuvre d'art numérique, un travail impressionnant !",
+              "subResponses": [
+                {
+                  "text": "Une recommandation pour l'améliorer ?",
+                  "speech": "Il y a toujours place à l'amélioration ! Avez-vous envisagé de m'appeler ?",
+                  "subResponses": [
+                    {
+                      "text": "Bonne idée, je vais essayer",
+                      "speech": "Génial ! Si vous avez besoin de plus de conseils, je suis là.",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "Merci pour la suggestion",
+                      "speech": "De rien ! Je suis toujours là pour vous aider à vous améliorer.",
+                      "subResponses": []
+                    }
+                  ]
+                },
+                {
+                  "text": "As-tu un truc secret ?",
+                  "speech": "Bien sûr ! Un de mes favoris est... Avez-vous déjà essayé... ?",
+                  "subResponses": [
+                    {
+                      "text": "Non, je n'ai pas essayé",
+                      "speech": "Vous devriez essayer ! Vous seriez surpris de voir à quel point cela peut être utile !",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "Oui, je vais l'utiliser plus souvent !",
+                      "speech": "C'est génial ! C'est toujours bon de partager des astuces !",
+                      "subResponses": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

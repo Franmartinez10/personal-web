@@ -1,0 +1,28 @@
+<div class="h-screen background">
+  <div class="app-grid">
+    <!-- Generar iconos de aplicaciones para el resto de la pantalla -->
+    <div
+      *ngFor="let app of appsTop; let i = index"
+      (click)="openAppTop(i)"
+      class="app-icon"
+      [style.backgroundImage]="'url(' + app.icon + ')'"
+    ></div>
+    <div
+      (click)="toggleFullscreen()"
+      class="app-icon flex align-items-center color-white justify-content-center"
+      style="background-color: black"
+    >
+      <i class="pi pi-stop text-4xl"></i>
+    </div>
+  </div>
+  <div class="top-apps">
+    <!-- Generar 4 iconos de aplicaciones para la fila superior -->
+    <div
+      *ngFor="let app of bottomApps.slice(0, 4); let i = index"
+      (click)="openAppBottom(i)"
+      class="app-icon"
+      [style.backgroundImage]="'url(' + app.icon + ')'"
+    ></div>
+  </div>
+</div>
+<router-outlet></router-outlet>

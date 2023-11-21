@@ -2,6 +2,7 @@ import { Component, Renderer2, ElementRef, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { AppService } from './services/app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,10 +16,11 @@ export class AppComponent implements OnInit {
   constructor(
     private deviceService: DeviceDetectorService,
     private appService: AppService,
+    private router: Router,
   ) {
-    console.log(this.deviceService.device);
     this.appService.browserLang = this.browserLang;
     this.appService.chooseLanguaje();
+    console.log(window.screen.width);
   }
   asignarCodigoIdioma(codigo: string): string {
     const codigoIdioma = codigo.toLowerCase();

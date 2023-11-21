@@ -1,0 +1,299 @@
+{
+  "index": {
+    "lang": "en_US",
+    "photo": "Photos",
+    "wallpaper": "Change Wallpaper",
+    "contacto": "How to Contact",
+    "activar": "Activate",
+    "cancelar": "Cancel",
+    "albums": "Albums",
+    "fullscreen": "Fullscreen",
+    "aboutMeTitle": "About Fran Martinez",
+    "personalInfo": {
+      "linkedin": "Your LinkedIn Profile",
+      "github": "Your GitHub Profile",
+      "behance": "Your Behance Profile",
+      "info": "Get to Know Me"
+    },
+    "studies": "Education",
+    "contactInfo": "Contact Information",
+    "ayuda": "How Can I Help You?",
+    "aboutMeDetails": {
+      "curriculum_pdf": "../../../assets/pdf/curriculum_Francisco_Martinez_en_2023.pdf",
+      "linkedin": "https://www.linkedin.com/in/fran-martinez-torres-04008551/",
+      "behance": "https://www.behance.net/fran_martinez10",
+      "github": "https://github.com/Franmartinez10",
+      "education": [
+        {
+          "institution": "CEU SAN PABLO UNIVERSITY, MADRID, SPAIN",
+          "duration": "2014 - 2019",
+          "degree": "Degrees in Digital Communication, PR, and Advertising",
+          "description": "Studies in digital communication aimed at developing the necessary skills for the comprehensive management of a digital project or product, as well as the fundamentals of programming, databases, and the different technologies and disciplines required to lead a technological project."
+        },
+        {
+          "institution": "HANZE UNIVERSITY OF APPLIED SCIENCES - GRONINGEN, NETHERLANDS",
+          "duration": "SEP 2017 - JUN 2018",
+          "degree": "Master: The Future of Technology and Society",
+          "description": "Focused on the creation and management of digital projects. Our project: An innovative prototype to manage the mobility and transportation of the society of the future (Netherlands in 2050) and presentation through the use of VR and AR technologies."
+        },
+        {
+          "institution": "CODENOTCH, MADRID, SPAIN",
+          "duration": "FEB - MAY 2021",
+          "degree": "Full Stack Web Development Bootcamp",
+          "description": "Bootcamp program focused on application development in JavaScript and TypeScript, Angular and Ionic. Microservices in Node.js. Creation and management of databases in MongoDB and MySQL. Application deployment and continuous integration, AWS."
+        }
+      ],
+      "contactDetails": {
+        "email": "fran.martinez.torres@gmail.com",
+        "phone": "+34 616 351 352",
+        "location": "Madrid, Spain"
+      }
+    }
+  },
+  "volver": "Back",
+
+  "phrases": [
+    "I have never pretended to be asleep to avoid an awkward situation.",
+    "I have never accidentally sent a message to my ex.",
+    "I have never entered a place without paying.",
+    "I have never made a prank call.",
+    "I have never left a restaurant without paying.",
+    "I have never cheated on a test.",
+    "I have never kissed someone just for fun.",
+    "I have never pretended to be someone else on social media.",
+    "I have never tried on a provocative costume just for fun.",
+    "I have never played truth or dare and chosen dare.",
+    "I have never broken something and pretended it wasn't me.",
+    "I have never left without letting my parents know.",
+    "I have never lied about my age.",
+    "I have never tried to sneak into a concert.",
+    "I have never used someone else's toothbrush without permission.",
+    "I have never hidden something in my room so it wouldn't be found.",
+    "I have never used the excuse 'I forgot' when I actually hadn't forgotten.",
+    "I have never accidentally sent a racy message to a family member.",
+    "I have never used a fake ID.",
+    "I have never dated someone out of boredom.",
+    "I have never pulled a prank and blamed someone else.",
+    "I have never walked out of a movie because I was bored.",
+    "I have never flirted to get something for free.",
+    "I have never played a tasteless prank.",
+    "I have never snooped through my partner's phone.",
+    "I have never said 'I love you' just to get something.",
+    "I have never worn the same underwear two days in a row.",
+    "I have never pretended to be sick to avoid work or school.",
+    "I have never dated someone just for their money or benefits.",
+    "I have never made up an emergency to get out of an awkward situation.",
+    "I have never eaten food from a broken plate."
+  ],
+  "yonunca": {
+    "jugar": "Play",
+    "comoJugar": "How to Play",
+    "creditos": "Credits",
+    "tituloComoJugar": "How to Play",
+    "instruccionJugar": "Just press the button to advance to the next phrase and play the most fun game, Never Have I Ever.",
+    "tituloReglas": "Rules of the Never Have I Ever Game",
+    "objetivoJuego": "Objective of the Game:",
+    "descripcionObjetivo": "The game consists of saying things you have never done. If someone in the group has done it, they must take a drink or perform a predefined action.",
+    "comoSeJuega": "How to Play:",
+    "pasosJuego_1": "Players sit in a circle or around a table.",
+    "pasosJuego_2": "One of the players starts by saying something they have never done using the phrase 'Never have I ever...' (for example, 'Never have I ever gone skydiving').",
+    "pasosJuego_3": "Players who have done that action must take a drink or perform an action agreed upon beforehand.",
+    "pasosJuego_4": "The next player continues with another 'Never have I ever...' statement and so on.",
+    "finDelJuego": "End of the Game:",
+    "descripcionFinJuego": "The game can end whenever the players want or when everyone is having enough fun.",
+    "desarrolloAplicacion_titulo": "App Development",
+    "desarrolloAplicacion_contenido_1": "Design and Development of the Never Have I Ever App",
+    "desarrolloAplicacion_contenido_2": "Francisco Martínez Torres",
+    "descargas_titulo": "Downloads",
+    "descargas_contenido_1": "Over 650,000 Downloads on Mobile Platforms",
+    "descargas_contenido_2": "- iOS",
+    "descargas_contenido_3": "- Android",
+    "descargas_contenido_4": "- Windows Phone",
+    "juegoMesa_titulo": "Board Game 'Never Have I Ever Revolution'",
+    "juegoMesa_contenido_1": "Successful Launch in October 2021",
+    "juegoMesa_contenido_2": "Over 15,000 Copies Sold",
+    "agradecimientos_titulo": "Special Thanks",
+    "agradecimientos_contenido_1": "Thanks to ",
+    "agradecimientos_link_1": "https://youragency.es/",
+    "agradecimientos_contenido_2": "https://juegostetrakis.com/"
+  },
+
+  "siro": {
+    "quePuedesHacer": "¿Qué puedes hacer?",
+    "ayudaTrabajo": "Pues un montonazo de cosas. ya verás. ¿Me puedes ayudar tu dándome un buen trabajo?",
+    "informacionServicios": "Información sobre servicios",
+    "infoServiciosWeb": "También ofrecemos una variedad de servicios de Desarrollo web y comunicación Digital.",
+    "serviciosSolicitados": "Servicios más solicitados",
+    "desarrolloWeb": "Desarrollo de aplicaciones web",
+    "funcionamientoDesarrolloWeb": "¿Cómo funciona?",
+    "tecnologiasConocidas": "¿Qué tecnologías conoces?",
+    "comunicacionDigital": "Comunicacion y marketing digital",
+    "incluyeComunicacionDigital": "¿Qué incluye?",
+    "trabajosRealizados": "Trabajos realizados",
+    "desarrolloBackend": "Desarrollo Backend y backops",
+    "contactarBackend": "¿Cómo contactar?",
+    "horarioAtencion": "Horario de atención",
+    "presentate": "Preséntate",
+    "ayudaAsistente": "¿Cómo te puedo ayudar?",
+    "estadoDia": "¿Qué tal tu día?",
+    "respuestaBuenDia": "¡El mío también es genial!",
+    "respuestaRegularDia": "No está mal, gracias por preguntar",
+    "graciosoAsistente": "Cuéntame algo gracioso",
+    "respuestaAsistente1": "¡El mío también es genial!",
+    "respuestaAsistente2": "No está mal, gracias por preguntar",
+    "elogiarCodigo": "Elogiar mi código",
+    "mejorarCodigo": "¿Alguna recomendación para mejorar?",
+    "trucosSecretos": "¿Tienes algún truco secreto?"
+  },
+
+  "siro2": [
+    {
+      "text": "What can you do?",
+      "speech": "Well, I can do a lot of things. You'll see. Can you help me by giving me a good job?",
+      "subResponses": [
+        {
+          "text": "Information about services",
+          "speech": "We also offer a variety of web development and Digital Communication services.",
+          "subResponses": [
+            {
+              "text": "Most requested services",
+              "speech": "Well, among my most requested services are:",
+              "subResponses": [
+                {
+                  "text": "Web application development",
+                  "speech": "My over 3 years of experience in web application development using state-of-the-art development frameworks",
+                  "subResponses": [
+                    {
+                      "text": "How does it work?",
+                      "speech": "You can get in touch with me by sending me an email, calling me, or contacting me on LinkedIn",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "What technologies do you know?",
+                      "speech": "I specialize in Angular, Ionic, React, and Flutter",
+                      "subResponses": []
+                    }
+                  ]
+                },
+                {
+                  "text": "Digital communication and marketing",
+                  "speech": "My 5 years of university studies allow me to have a very broad and professional vision of different digital communication and marketing services",
+                  "subResponses": [
+                    {
+                      "text": "What does it include?",
+                      "speech": "You can see all my work in my bijains portfolio",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "Completed works",
+                      "speech": "You can see all my work in my bijains portfolio",
+                      "subResponses": []
+                    }
+                  ]
+                },
+                {
+                  "text": "Backend and backops development",
+                  "speech": "We offer a backend development service using the latest tools",
+                  "subResponses": [
+                    {
+                      "text": "How to contact?",
+                      "speech": "You can get in touch with me by sending me an email, calling me, or contacting me on LinkedIn",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "Office hours",
+                      "speech": "Just send me a message, and I'll see when I respond, hahaha, just kidding, you can contact me by phone during office hours",
+                      "subResponses": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Introduce yourself",
+          "speech": "Greetings! I'm Fran Martinez, your virtual assistant, and also the creator of this page.",
+          "subResponses": [
+            {
+              "text": "How can I help you?",
+              "speech": "I'm here to answer questions or help you with whatever you need. How can I assist you today?",
+              "subResponses": [
+                {
+                  "text": "How's your day?",
+                  "speech": "My day is fantastic! Thanks for asking. How about yours?",
+                  "subResponses": [
+                    {
+                      "text": "Mine's great too!",
+                      "speech": "I'm glad to hear that! Is there something specific I can help you with?",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "Not bad, thanks for asking",
+                      "speech": "I hope it gets better! How can I help you today?",
+                      "subResponses": []
+                    }
+                  ]
+                },
+                {
+                  "text": "Tell me something funny",
+                  "speech": "Sure! Did you know that programmers don't eat ice cream because it always melts? ",
+                  "subResponses": [
+                    {
+                      "text": "Haha, that's a good one",
+                      "speech": "I'm glad it brought a smile to your face! How else can I assist you?",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "You need to improve your jokes",
+                      "speech": "I'll try! But now, how else can I assist you?",
+                      "subResponses": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Praise my code",
+              "speech": "My code is like a digital work of art, an impressive job!",
+              "subResponses": [
+                {
+                  "text": "Any recommendations for improvement?",
+                  "speech": "There's always room for improvement! Have you thought about giving me a call?",
+                  "subResponses": [
+                    {
+                      "text": "Good idea, I'll try",
+                      "speech": "Great! If you need more suggestions, I'm here.",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "Thanks for the suggestion",
+                      "speech": "You're welcome! I'm always here to help you improve.",
+                      "subResponses": []
+                    }
+                  ]
+                },
+                {
+                  "text": "Do you have any secret tricks?",
+                  "speech": "Of course! One of my favorites is... have you ever tried...?",
+                  "subResponses": [
+                    {
+                      "text": "No, I haven't tried it",
+                      "speech": "You should give it a try! You'd be surprised how useful it can be!",
+                      "subResponses": []
+                    },
+                    {
+                      "text": "Yes, I'll use it more often!",
+                      "speech": "That's great! It's always good to share tricks!",
+                      "subResponses": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

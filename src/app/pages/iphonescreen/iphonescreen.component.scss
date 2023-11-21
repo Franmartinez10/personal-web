@@ -1,0 +1,103 @@
+/* Estilos para la pantalla del iPhone */
+.iphone-screen {
+  position: relative;
+  width: 375px; /* Ancho del iPhone 12 */
+  height: 812px; /* Alto del iPhone 12 */
+  border-radius: 40px; /* Bordes redondeados del iPhone */
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra del iPhone */
+  background-color: #f8f8f8; /* Color de fondo del iPhone */
+}
+
+/* Fondo de pantalla */
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../assets/images/wallpapers/Fran_Martinez_Torres.jpg");
+  background-size: cover;
+
+  z-index: -1; /* Coloca el fondo detrás de los elementos */
+}
+
+/* Estilos para el fondo con desenfoque */
+.background::before {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../assets/images/wallpapers/Fran_Martinez_Torres.jpg");
+  background-size: cover;
+  filter: blur(8px); /* Tamaño del desenfoque */
+  z-index: -1; /* Coloca el fondo detrás de los elementos */
+}
+
+/* Cuadrícula de aplicaciones */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas para las apps */
+  gap: 0px; /* Espacio entre las apps */
+  padding: 5px;
+  margin-top: 0px; /* Espacio superior para el área de la cámara y altavoz */
+  justify-items: center;
+}
+
+/* Estilos para los iconos de las aplicaciones */
+.app-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  background-color: #6cb2eb18;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-repeat: no-repeat;
+  background-size: 110%; /* Ajusta el tamaño de la imagen al contenedor */
+  background-position: center; /* Centra la imagen */
+  margin: 10px;
+}
+
+/* Resto de estilos... */
+
+/* Estilos para la fila de apps superior */
+.top-apps {
+  width: 96%;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas para las apps */
+  gap: 0px; /* Espacio entre las apps */
+  padding: 5px;
+  margin-bottom: 0px;
+  justify-items: center;
+  background-color: rgba(0, 0, 0, 0.337);
+  border-radius: 20px;
+}
+
+/* Estilos para los iconos de las aplicaciones */
+// .app-icon {
+//   width: 80px; /* Aumenta el tamaño de los íconos */
+//   height: 80px; /* Aumenta el tamaño de los íconos */
+//   border-radius: 15px; /* Bordes redondeados */
+//   background-color: #6cb2eb; /* Color agradable para los íconos */
+//   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra de las aplicaciones */
+// }
+/* Estilos al abrir la aplicación */
+.app-opened {
+  animation: appOpenEffect 0.3s ease-in-out forwards;
+}
+
+@keyframes appOpenEffect {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Barra inferior para la última fila de apps */
+.bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f2f2f2; /* Color de la barra inferior */
+}

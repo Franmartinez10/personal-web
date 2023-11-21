@@ -27,6 +27,5 @@ export class AppService {
       this.translate.setDefaultLang('en');
       this.translate.use('en');
     }
-    console.log(this.translate);
   }
 }
