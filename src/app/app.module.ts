@@ -52,6 +52,9 @@ import { IphoneSafariComponent } from './pages/iphone-safari/iphone-safari.compo
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MobileRouteComponent } from './components/mobile-route/mobile-route.component';
 import { DesktopRouteComponent } from './components/desktop-route/desktop-route.component';
+import { RelojComponent } from './components/reloj/reloj.component';
+import { PhotosThumbComponent } from './components/photos-thumb/photos-thumb.component';
+import { GoogleAnalyticsModule } from 'angular-ga';
 
 export function HttpLoadFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -82,6 +85,8 @@ export function HttpLoadFactory(http: HttpClient) {
     GalleryComponent,
     MobileRouteComponent,
     DesktopRouteComponent,
+    RelojComponent,
+    PhotosThumbComponent,
   ],
   imports: [
     CommonModule,
@@ -102,6 +107,9 @@ export function HttpLoadFactory(http: HttpClient) {
     ContextMenuModule,
     DropdownModule,
     ToastModule,
+    GoogleAnalyticsModule.forRoot({
+      trackingCode: 'TU_CODIGO_DE_SEGUIMIENTO',
+    }),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

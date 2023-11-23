@@ -113,10 +113,13 @@ export class IndexComponent {
     private translateService: TranslateService,
     private appService: AppService,
     private router: Router,
+    public photoService: PhotoService,
   ) {}
 
   // Initialization logic in ngOnInit method
   ngOnInit() {
+    this.getFotos();
+
     // Initializing voice and fetching translated content
     this.getVoice();
 
@@ -527,8 +530,6 @@ export class IndexComponent {
 
     // Fetching files and images
     this.nodeService.getFiles().then((data) => (this.nodes = data));
-
-    this.getFotos();
   }
 
   /// LANGUAJE MODIFICATION
@@ -928,11 +929,11 @@ export class IndexComponent {
             name: any;
           };
         }) => {
+          console.log(this.photoService.apiUrl + photo.attributes.url);
           const newItem = {
-            itemImageSrc: 'http://45.147.251.201:1337' + photo.attributes.url,
+            itemImageSrc: this.photoService.apiUrl + photo.attributes.url,
             thumbnailImageSrc:
-              'http://45.147.251.201:1337' +
-              photo.attributes.formats.thumbnail.url,
+              this.photoService.apiUrl + photo.attributes.formats.thumbnail.url,
             alt: photo.attributes.caption || 'No description available',
             title: photo.attributes.name || 'No title available',
             loaded: false,

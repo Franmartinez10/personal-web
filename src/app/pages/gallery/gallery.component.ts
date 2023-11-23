@@ -9,6 +9,7 @@ import { Router, RouterModule } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { StrapiService } from 'src/app/services/strapi.service';
 import * as Hammer from 'hammerjs';
+import { PhotoService } from 'src/app/services/photo.service';
 
 @Component({
   selector: 'app-gallery',
@@ -29,64 +30,65 @@ export class GalleryComponent implements OnInit, AfterViewInit {
   currentImageIndex = 0; // Índice de la imagen actual
   hammer: HammerManager | undefined;
   @ViewChild('bottomMenu') bottomMenu!: ElementRef;
+  translated: any;
 
   constructor(
     private strapiService: StrapiService,
     private translateService: TranslateService,
     private router: Router,
+    public photoService: PhotoService,
   ) {}
   ngOnInit() {
-    this.getFotos();
-  }
-  async getFotos() {
-    this.strapiService.getPublicPhotos().then((data: any) => {
-      this.images = this.transformApiResponse(data);
-      this.initialImages = [...this.images]; // Guarda las imágenes originales
+    this.images = this.photoService.images;
+    this.initialImages = this.images;
+
+    this.translateService.get('index', []).subscribe((data: any) => {
+      this.translated = data;
     });
   }
   ngAfterViewInit() {
     console.log(this.bottomMenu);
     const bottomMenuElement = this.bottomMenu.nativeElement;
-    const hammer = new Hammer(bottomMenuElement);
-    console.log(hammer);
-
-    hammer.on('swipeup', () => {
-      this.exitGallery();
-    });
   }
   /// funcion galeria de fotos
-  transformApiResponse(apiResponse: { data: any }) {
-    const data = apiResponse.data;
-    const transformedArray: {
-      itemImageSrc: any;
-      thumbnailImageSrc: any;
-      alt: any;
-      title: any;
-      album: string; // Agrega el campo para el álbum
-      loaded: boolean;
-    }[] = [];
+  // async getFotos() {
+  //   this.strapiService.getPublicPhotos().then((data: any) => {
+  //     this.images = this.transformApiResponse(data);
+  //     this.initialImages = [...this.images]; // Guarda las imágenes originales
+  //   });
+  // }
+  // transformApiResponse(apiResponse: { data: any }) {
+  //   const data = apiResponse.data;
+  //   const transformedArray: {
+  //     itemImageSrc: any;
+  //     thumbnailImageSrc: any;
+  //     alt: any;
+  //     title: any;
+  //     album: string; // Agrega el campo para el álbum
+  //     loaded: boolean;
+  //   }[] = [];
 
-    data.data.forEach((item: any) => {
-      const fotoData = item.attributes.foto.data;
+  //   data.data.forEach((item: any) => {
+  //     const fotoData = item.attributes.foto.data;
 
-      fotoData.forEach((photo: any) => {
-        const newItem = {
-          itemImageSrc: 'http://45.147.251.201:1337' + photo.attributes.url,
-          thumbnailImageSrc:
-            'http://45.147.251.201:1337' +
-            photo.attributes.formats.thumbnail.url,
-          alt: photo.attributes.caption || 'No description available',
-          title: photo.attributes.name || 'No title available',
-          album: item.attributes.Album || 'No album', // Obtener el nombre del álbum
-          loaded: false,
-        };
+  //     fotoData.forEach((photo: any) => {
+  //       const newItem = {
+  //         itemImageSrc: 'http://45.147.251.201:1337' + photo.attributes.url,
+  //         thumbnailImageSrc:
+  //           'http://45.147.251.201:1337' +
+  //           photo.attributes.formats.thumbnail.url,
+  //         alt: photo.attributes.caption || 'No description available',
+  //         title: photo.attributes.name || 'No title available',
+  //         album: item.attributes.Album || 'No album', // Obtener el nombre del álbum
+  //         loaded: false,
+  //       };
 
-        transformedArray.push(newItem);
-      });
-    });
+  //       transformedArray.push(newItem);
+  //     });
+  //   });
 
-    return transformedArray;
-  }
+  //   return transformedArray;
+  // }
 
   toggleMenu(option: string) {
     if (option === 'fototeca') {
@@ -153,8 +155,6 @@ export class GalleryComponent implements OnInit, AfterViewInit {
   }
   exitGallery() {
     // Aquí puedes realizar acciones adicionales al salir de la galería
-    console.log('f');
-
     this.router.navigate(['../home']); // Cambia '/home' a la ruta de tu escritorio de iPhone
   }
 

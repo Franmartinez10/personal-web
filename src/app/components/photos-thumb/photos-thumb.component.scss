@@ -1,0 +1,18 @@
+.app-icon-widgets {
+  width: 170px;
+  height: 170px;
+  border-radius: 15px;
+  background-color: #6cb2eb18;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-repeat: no-repeat;
+  background-size: 110%; /* Ajusta el tamaño de la imagen al contenedor */
+  background-position: center; /* Centra la imagen */
+  margin: 0px;
+  img {
+    width: 170px;
+    height: 170px;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: top;
+  }
+}

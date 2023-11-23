@@ -1,12 +1,22 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
 import { AuthService } from './auth.service';
+import { environment } from 'src/enviroments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StrapiService {
-  private baseUrl = 'http://45.147.251.201:1337/api';
+  // private baseUrl = 'http://45.147.251.201:1337/api';
+  private baseUrl = environment.apiUrl;
+
+  private axiosConf = axios.create({
+    baseURL: this.baseUrl, // Reemplaza con la URL de tu API
+    timeout: 5000, // Tiempo de espera para la solicitud (opcional)
+    httpsAgent: {
+      rejectUnauthorized: false, // Deshabilita la verificación SSL
+    },
+  });
 
   constructor(private authService: AuthService) {}
 
@@ -22,18 +32,21 @@ export class StrapiService {
   async getAllItems(categoria: string) {
     console.log(await this.getHeaders(), `${this.baseUrl}/${categoria}`);
 
-    return axios.get(`${this.baseUrl}/${categoria}`, await this.getHeaders());
+    return this.axiosConf.get(
+      `${this.baseUrl}/${categoria}`,
+      await this.getHeaders(),
+    );
   }
 
   async getItemById(categoria: string, id: number) {
-    return axios.get(
+    return this.axiosConf.get(
       `${this.baseUrl}/${categoria}/${id}`,
       await this.getHeaders(),
     );
   }
 
   async createItem(categoria: string, data: any) {
-    return axios.post(
+    return this.axiosConf.post(
       `${this.baseUrl}/${categoria}`,
       data,
       await this.getHeaders(),
@@ -41,7 +54,7 @@ export class StrapiService {
   }
 
   async updateItem(categoria: string, id: number, data: any) {
-    return axios.put(
+    return this.axiosConf.put(
       `${this.baseUrl}/${categoria}/${id}`,
       data,
       await this.getHeaders(),
@@ -49,13 +62,15 @@ export class StrapiService {
   }
 
   async deleteItem(categoria: string, id: number) {
-    return axios.delete(
+    return this.axiosConf.delete(
       `${this.baseUrl}/${categoria}/${id}`,
       await this.getHeaders(),
     );
   }
 
   async getPublicPhotos() {
-    return axios.get(`${this.baseUrl}/galerias?populate=*`);
+    console.log(this.baseUrl);
+
+    return this.axiosConf.get(`${this.baseUrl}/galerias?populate=*`);
   }
 }

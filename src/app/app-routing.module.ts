@@ -18,6 +18,8 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { MobileRouteComponent } from './components/mobile-route/mobile-route.component';
 import { DesktopRouteComponent } from './components/desktop-route/desktop-route.component';
 import { YoNuncaRevolutionComponent } from './components/yo-nunca-revolution/yo-nunca-revolution.component';
+import { GoogleComponent } from './components/google/google.component';
+import { RelojComponent } from './components/reloj/reloj.component';
 
 const routes: Routes = [
   {
@@ -71,8 +73,10 @@ const routes: Routes = [
   // { path: '', component: IndexComponent },
   { path: 'safari', component: IphoneSafariComponent },
   { path: 'galeria', component: GalleryComponent },
+  { path: 'google', component: GoogleComponent },
+  { path: 'reloj', component: RelojComponent },
 
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  { path: '**', component: DeviceCheckComponent, pathMatch: 'full' },
 ];
 
 @NgModule({

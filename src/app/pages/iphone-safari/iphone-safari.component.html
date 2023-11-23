@@ -1,16 +1,14 @@
 <div class="iphone-wrapper">
-  <div class="iphone-header">
-    <div class="iphone-url-bar">
-      <div class="url-field">
-        <div class="lock-icon"></div>
-        <input type="text" placeholder="Buscar o escribir URL" [value]="url" />
-        <div class="refresh-icon"></div>
-      </div>
-      <button (click)="share()">Compartir</button>
-    </div>
-  </div>
+
   <div class="iphone-content">
     <app-google></app-google>
+
     <ng-content></ng-content>
+
   </div>
+
+  <div class="iphone-bar" (touchmove)="exitTab()">
+    <div class="button"></div>
+  </div>
+
 </div>

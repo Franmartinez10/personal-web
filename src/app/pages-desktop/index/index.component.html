@@ -6,13 +6,8 @@
     </ng-template>
     <ng-template pTemplate="end">
       <i class="pi pi-stop" (click)="toggleFullScreen()"></i>
-      <p-dropdown
-        [options]="languages"
-        [style]="{ marginRight: '10px', border: 'none' }"
-        [appendTo]="'body'"
-        (onChange)="changeLanguage($event)"
-        [ngModel]="selectedLanguage"
-      >
+      <p-dropdown [options]="languages" [style]="{ marginRight: '10px', border: 'none' }"
+        (onChange)="changeLanguage($event)" [ngModel]="selectedLanguage">
         <ng-template let-item pTemplate="selectedItem">
           {{ item.flag }} {{ item.name }}
         </ng-template>
@@ -35,16 +30,9 @@
     </div>
     <div class="assistant-wrapper">
       <div class="assistant-icon" (click)="activateAssistant()">
-        <img
-          *ngIf="!assistantActive"
-          src="../../../assets/images/logo_siri_estatico.png"
-          alt="Icono de siri estático"
-        />
-        <img
-          *ngIf="assistantActive"
-          src="../../../assets/gif/icono_siri_animado.gif"
-          alt="Icono de siri animado"
-        />
+        <img *ngIf="!assistantActive" src="../../../assets/images/logo_siri_estatico.png"
+          alt="Icono de siri estático" />
+        <img *ngIf="assistantActive" src="../../../assets/gif/icono_siri_animado.gif" alt="Icono de siri animado" />
       </div>
     </div>
     <div class="assistant-dialog" *ngIf="assistantActive">
@@ -54,19 +42,11 @@
         </div>
       </div>
       <div class="assistant-options">
-        <div
-          *ngFor="let option of currentOptions"
-          class="option"
-          (click)="handleOptionClick(option)"
-        >
+        <div *ngFor="let option of currentOptions" class="option" (click)="handleOptionClick(option)">
           {{ option.text }}
           <hr />
         </div>
-        <button
-          class="back-button"
-          *ngIf="optionHistory.length > 1"
-          (click)="goBack()"
-        >
+        <button class="back-button" *ngIf="optionHistory.length > 1" (click)="goBack()">
           {{ "volver" | translate }}
         </button>
       </div>
@@ -82,39 +62,24 @@
     </p-dock>
 
     <!-- SPOTIFY -->
-    <iframe
-      *ngIf="spotifyDialog"
-      style="
+    <iframe *ngIf="spotifyDialog" style="
         border-radius: 12px;
         position: fixed;
         width: 652px;
         bottom: 100px;
         left: 28%;
-      "
-      src="https://open.spotify.com/embed/playlist/50Z5LoyOGivPxj49fuB399?utm_source=generator"
-      width="100%"
-      height="552"
-      frameBorder="0"
-      bottom="0"
-      allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"
-    ></iframe>
+      " src="https://open.spotify.com/embed/playlist/50Z5LoyOGivPxj49fuB399?utm_source=generator" width="100%"
+      height="552" frameBorder="0" bottom="0" allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
     <p-toast></p-toast>
     <!-- Folders Desktop -->
     <div class="desktop">
       <!-- Icons on the desktop -->
       <div class="icons-dekstop">
-        <div
-          class="icon-desktop"
-          (click)="createDialog('Curriculum_Fran_Martinez.pdf')"
-        >
+        <div class="icon-desktop" (click)="createDialog('Curriculum_Fran_Martinez.pdf')">
           <a>
-            <img
-              src="../../../assets/images/curriculum_Francisco_martinez_E_S_2023.jpg"
-              alt=""
-            />
+            <img src="../../../assets/images/curriculum_Francisco_martinez_E_S_2023.jpg" alt="" />
             <span>curriculum_Fran_Martinez.pdf</span>
           </a>
         </div>
@@ -161,62 +126,30 @@
       </div>
     </div>
 
-    <p-dialog
-      [(visible)]="displayFinder"
-      [breakpoints]="{ '960px': '50vw' }"
-      [style]="{ width: '30vw', height: '18rem' }"
-      [draggable]="true"
-      [resizable]="true"
-    >
+    <p-dialog [(visible)]="displayFinder" [breakpoints]="{ '960px': '50vw' }"
+      [style]="{ width: '30vw', height: '18rem' }" [draggable]="true" [resizable]="true">
       <p-tree [value]="nodes"></p-tree>
     </p-dialog>
 
     <div [innerHTML]="dialogs"></div>
 
-    <p-dialog
-      [maximizable]="true"
-      [(visible)]="displayTerminal"
-      [breakpoints]="{ '960px': '50vw' }"
-      [style]="{ width: '30vw' }"
-      [draggable]="true"
-      [resizable]="false"
-    >
-      <p-terminal
-        welcomeMessage="Welcome to PrimeNG (cmd: 'date', 'greet {0}', 'random')"
-        prompt="primeng $"
-      ></p-terminal>
+    <p-dialog [maximizable]="true" [(visible)]="displayTerminal" [breakpoints]="{ '960px': '50vw' }"
+      [style]="{ width: '30vw' }" [draggable]="true" [resizable]="false">
+      <p-terminal welcomeMessage="Welcome to PrimeNG (cmd: 'date', 'greet {0}', 'random')"
+        prompt="primeng $"></p-terminal>
     </p-dialog>
     <div class="margin-sides">
-      <ng-container
-        *ngFor="let dialog of dialogs; let i = index"
-        [style]="dialog.margin"
-      >
+      <ng-container *ngFor="let dialog of dialogs; let i = index" [style]="dialog.margin">
         <!-- ///// VENTANAS DIALOGS  -->
-        <p-dialog
-          [position]="dialog.position"
-          class="mt-8"
-          [(visible)]="dialog.display"
-          [styleClass]="dialog.isMaximized ? 'maximized-dialog' : ''"
-          [modal]="false"
-          [style]="dialog.style"
-          [closable]="false"
-          [draggable]="true"
-        >
+        <p-dialog [position]="dialog.position" class="mt-8" [(visible)]="dialog.display"
+          [styleClass]="dialog.isMaximized ? 'maximized-dialog' : ''" [modal]="false" [style]="dialog.style"
+          [closable]="false" [draggable]="true">
           <ng-template pTemplate="header">
             <div class="macos-title-bar">
               <div class="macos-buttons">
-                <span
-                  class="macos-button close"
-                  (click)="closeDialog(i)"
-                ></span>
-                <span
-                  class="macos-button minimize"
-                  (click)="minimizeDialog()"
-                ></span>
-                <span
-                  class="macos-button maximize"
-                  (click)="maximizeDialog(dialog)"
-                ></span>
+                <span class="macos-button close" (click)="closeDialog(i)"></span>
+                <span class="macos-button minimize" (click)="minimizeDialog()"></span>
+                <span class="macos-button maximize" (click)="maximizeDialog(dialog)"></span>
               </div>
               <div class="macos-title align-items-center flex">
                 {{ dialog.titulo }}
@@ -229,23 +162,14 @@
           </div>
           <app-google *ngIf="dialog.titulo === 'Safari'"></app-google>
           <!-- // yo nunca revolution -->
-          <app-yo-nunca-revolution
-            *ngIf="dialog.titulo === 'Yo Nunca Revolution'"
-          ></app-yo-nunca-revolution>
+          <app-yo-nunca-revolution *ngIf="dialog.titulo === 'Yo Nunca Revolution'"></app-yo-nunca-revolution>
 
           <!-- // Trash Bin -->
           <div class="folder" *ngIf="dialog.titulo === 'Trash'">
             <div class="icons-folders">
-              <div
-                class="icon-folder"
-                (click)="createDialog('Summer_july_2014.jpg')"
-              >
+              <div class="icon-folder" (click)="createDialog('Summer_july_2014.jpg')">
                 <a>
-                  <img
-                    style="width: 60px"
-                    src="../../../assets/images/summer_july_2014.jpg"
-                    alt=""
-                  />
+                  <img style="width: 60px" src="../../../assets/images/summer_july_2014.jpg" alt="" />
                   <span style="margin-top: 5px">Summer_july_2014.jpg</span>
                 </a>
               </div>
@@ -253,27 +177,16 @@
           </div>
 
           <div style="height: 100%">
-            <embed
-              *ngIf="dialog.titulo === 'Curriculum_Fran_Martinez.pdf'"
-              [src]="getSafeUrl()"
-              type="application/pdf"
-              width="100%"
-              height="800px"
-            />
+            <embed *ngIf="dialog.titulo === 'Curriculum_Fran_Martinez.pdf'" [src]="getSafeUrl()" type="application/pdf"
+              width="100%" height="800px" />
           </div>
         </p-dialog>
       </ng-container>
 
       <!-- /// ABOUT ME  -->
-      <p-dialog
-        class="mt-8"
-        [visible]="displayAboutMe"
-        [modal]="false"
-        [closable]="false"
-        styleClass="about-me-dialog ui-dialog-content flex justify-content-center"
-        [draggable]="true"
-        [style]="{ width: '80%', 'max-width': '600px', margin: '0 auto' }"
-      >
+      <p-dialog class="mt-8" [visible]="displayAboutMe" [modal]="false" [closable]="false"
+        styleClass="about-me-dialog ui-dialog-content flex justify-content-center" [draggable]="true"
+        [style]="{ width: '80%', 'max-width': '600px', margin: '0 auto' }">
         <ng-template pTemplate="header">
           <div class="macos-title-bar">
             <!-- Botones de cierre/minimizar/maximizar -->
@@ -292,8 +205,7 @@
             <!-- Tu foto -->
             <img
               src="https://media.licdn.com/dms/image/C5603AQHgQm5806sx2A/profile-displayphoto-shrink_400_400/0/1541434175803?e=1701907200&v=beta&t=o-oRkKMTZI49TCMZKrwgoS0_joXYw21zM6AYgP6gRfw"
-              alt="Foto de Fran Martínez"
-            />
+              alt="Foto de Fran Martínez" />
           </div>
           <div class="personal-info">
             <!-- Información personal -->
@@ -303,31 +215,28 @@
                 LinkedIn:
                 <a href="tu_perfil_LinkedIn">{{
                   "index.personalInfo.linkedin" | translate
-                }}</a>
+                  }}</a>
               </li>
               <li>
                 GitHub:
                 <a href="tu_perfil_GitHub">{{
                   "index.personalInfo.github" | translate
-                }}</a>
+                  }}</a>
               </li>
               <li>
                 Behance:
                 <a href="tu_perfil_Behance">{{
                   "index.personalInfo.behance" | translate
-                }}</a>
+                  }}</a>
               </li>
             </ul>
           </div>
           <div class="education">
             <!-- Información de estudios -->
             <h2>{{ "index.studies" | translate }}</h2>
-            <p
-              *ngFor="
+            <p *ngFor="
                 let education of 'index.aboutMeDetails.education' | translate
-              "
-              class="education-info"
-            >
+              " class="education-info">
               {{ education.degree }}
             </p>
           </div>
@@ -337,35 +246,29 @@
             <p class="contact-detail">
               <strong>
                 <i class="pi pi-envelope"></i>
-                <a
-                  href="mailto:{{
+                <a href="mailto:{{
                     'index.aboutMeDetails.contactDetails.email' | translate
-                  }}"
-                >
+                  }}">
                   {{ "index.aboutMeDetails.contactDetails.email" | translate }}
                 </a>
               </strong>
               <br />
               <strong>
                 <i class="pi pi-phone"></i>
-                <a
-                  href="tel:{{
+                <a href="tel:{{
                     'index.aboutMeDetails.contactDetails.phone' | translate
-                  }}"
-                >
+                  }}">
                   {{ "index.aboutMeDetails.contactDetails.phone" | translate }}
                 </a>
               </strong>
               <br />
               <strong>
                 <i class="pi pi-map-marker"></i>
-                <a
-                  href="{{
+                <a href="{{
                     'index.aboutMeDetails.contactDetails.location' | translate
-                  }}"
-                >
+                  }}">
                   {{
-                    "index.aboutMeDetails.contactDetails.location" | translate
+                  "index.aboutMeDetails.contactDetails.location" | translate
                   }}
                 </a>
               </strong>
@@ -376,45 +279,26 @@
 
       <!-- //// GALERIA -->
 
-      <p-galleria
-        [value]="images"
-        [showThumbnails]="true"
-        [showItemNavigators]="true"
-        [(visible)]="displayGalleria"
-        [responsiveOptions]="responsiveOptions"
-        [containerStyle]="{ 'max-width': '850px' }"
-        [fullScreen]="true"
-        [numVisible]="8"
-      >
+      <p-galleria [value]="images" [showThumbnails]="true" [showItemNavigators]="true" [(visible)]="displayGalleria"
+        [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '850px' }" [fullScreen]="true"
+        [numVisible]="8">
         <ng-template pTemplate="item" let-item>
           <div class="image-container">
-            <img
-              [src]="item.thumbnailImageSrc"
-              [style.display]="!item.loaded ? 'block' : 'none'"
-              style="max-width: 100%; height: 80vh"
-              class="image"
-            />
-            <img
-              [src]="item.itemImageSrc"
-              [style.display]="item.loaded ? 'block' : 'none'"
-              (load)="onImageLoad(item)"
-              class="image"
-              style="
+            <img [src]="item.thumbnailImageSrc" [style.display]="!item.loaded ? 'block' : 'none'"
+              style="max-width: 100%; height: 80vh" class="image" />
+            <img [src]="item.itemImageSrc" [style.display]="item.loaded ? 'block' : 'none'" (load)="onImageLoad(item)"
+              class="image" style="
                 max-width: 100%;
                 max-height: 80vh;
                 display: block;
                 margin: 0 auto;
-              "
-            />
+              " />
             <div class="watermark">© Fran Martinez</div>
           </div>
         </ng-template>
         <ng-template pTemplate="thumbnail" let-item>
           <div class="grid grid-nogutter justify-content-center">
-            <img
-              [src]="item.thumbnailImageSrc"
-              style="max-width: 80px; height: 80px"
-            />
+            <img [src]="item.thumbnailImageSrc" style="max-width: 80px; height: 80px" />
           </div>
         </ng-template>
       </p-galleria>

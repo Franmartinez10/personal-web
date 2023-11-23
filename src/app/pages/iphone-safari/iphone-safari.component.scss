@@ -95,3 +95,21 @@ button {
   color: #fff;
   cursor: pointer;
 }
+
+.iphone-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.button {
+  width: 100px;
+  height: 6px;
+  background-color: #303030f6;
+  border-radius: 3px;
+  cursor: pointer;
+}

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FullscreenService } from 'src/app/services/fullscreen.service';
+import { PhotoService } from 'src/app/services/photo.service';
 
 @Component({
   selector: 'app-iphonescreen',
@@ -11,9 +12,12 @@ export class IphonescreenComponent {
   topApps = Array(4).fill(null); // 4 apps para la fila superior
   apps = Array(12).fill(null); // 20 apps para el resto de la pantalla
   webkitSpeechRecognition: any;
+
+  thumbailPhoto: string = '';
   constructor(
     private router: Router,
     private fullscreenService: FullscreenService,
+    public photoService: PhotoService,
   ) {}
 
   toggleFullscreen() {
@@ -23,6 +27,20 @@ export class IphonescreenComponent {
     } else {
       this.fullscreenService.exitFullscreen();
     }
+  }
+  cambiarfoto() {
+    console.log(
+      this.photoService.images[this.photoService.indexGallery].itemImageSrc,
+    );
+
+    return this.photoService.images[this.photoService.indexGallery]
+      .itemImageSrc;
+  }
+  cambiarIndex() {
+    +console.log(this.photoService.indexGallery);
+
+    this.photoService.indexGallery++;
+    console.log(this.photoService.indexGallery);
   }
 
   // Setting up dock items for various applications
@@ -158,6 +176,62 @@ export class IphonescreenComponent {
       },
     },
   ];
+  widgets: any[] = [
+    {
+      label: 'Reloj',
+      display: true,
+      center: true,
+      tooltipOptions: {
+        tooltipLabel: 'Reloj',
+        tooltipPosition: 'top',
+        positionTop: -15,
+        positionLeft: 15,
+        showDelay: 1000,
+      },
+      icon: `<app-reloj-component>`,
+      command: () => {
+        window.open('https://github.com/Franmartinez10', '_blank');
+      },
+    },
+    {
+      label: 'Linkedin',
+      center: true,
+      tooltipOptions: {
+        tooltipLabel: 'Linkedin',
+        tooltipPosition: 'top',
+        positionTop: -15,
+        positionLeft: 15,
+        showDelay: 1000,
+      },
+      icon: '../../../assets/images/linkedin-app-icon.svg',
+      command: () => {
+        window.open(
+          'https://www.linkedin.com/in/fran-martinez-torres-04008551/',
+          '_blank',
+        );
+      },
+    },
+  ];
+  widgetsL: any[] = [
+    {
+      label: 'Spotify',
+      center: true,
+      tooltipOptions: {
+        tooltipLabel: 'Spotify',
+        tooltipPosition: 'top',
+        positionTop: -15,
+        positionLeft: 15,
+        showDelay: 1000,
+      },
+      icon: '../../../assets/images/icons/SVG/logo_spotify.svg',
+      command: () => {
+        window.open(
+          'https://open.spotify.com/playlist/50Z5LoyOGivPxj49fuB399?si=fe9301c828e5475e',
+          '_blank',
+        );
+      },
+    },
+  ];
   bottomApps: any[] = [
     {
       label: 'Phone',
@@ -211,21 +285,7 @@ export class IphonescreenComponent {
         this.router.navigate(['safari']);
       },
     },
-    {
-      label: 'App Store',
-      center: true,
-      tooltipOptions: {
-        tooltipLabel: 'App Store',
-        tooltipPosition: 'top',
-        positionTop: -15,
-        positionLeft: 15,
-        showDelay: 1000,
-      },
-      icon: 'https://primefaces.org/cdn/primeng/images/dock/appstore.svg',
-      command: () => {
-        this.router.navigate(['galeria']);
-      },
-    },
+
     {
       label: 'Email',
       center: true,

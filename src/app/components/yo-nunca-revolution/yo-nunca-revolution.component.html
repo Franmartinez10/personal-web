@@ -1,30 +1,20 @@
-<div class="yo-nunca-revolution sm:w-16rem">
+<div class="yo-nunca-revolution">
   <div class="icono-aspa" (click)="toggleMostrarMenu()" *ngIf="!mostrarMenu">
     <!-- <i class="pi pi-times"></i> -->
     ✖
   </div>
 
-  <div class="logo">
+  <div class="logo ">
     <!-- Aquí va tu logo -->
-    <img
-      src="../../../assets/images/logo_yo_nunca.svg"
-      alt="Logo Yo Nunca Revolution"
-    />
+    <img src="../../../assets/images/logo_yo_nunca.svg" alt="Logo Yo Nunca Revolution" />
   </div>
 
   <!-- Pantalla de juego con frases dinámicas -->
-  <div
-    *ngIf="pantalla === 'jugar' && !mostrarMenu"
-    class="flex align-items-center justify-content-cente flex-column fixed"
-  >
+  <div *ngIf="pantalla === 'jugar' && !mostrarMenu" class="flex align-items-center justify-content-cente flex-column ">
     <p>{{ fraseActual }}</p>
     <div class="icon-move">
-      <img
-        class="icon-move"
-        (click)="cambiarFrase()"
-        src="../../../assets/images/boton_circular.svg"
-        alt="Icono cambiar frase"
-      />
+      <img class="icon-move" (click)="cambiarFrase()" src="../../../assets/images/boton_circular.svg"
+        alt="Icono cambiar frase" />
     </div>
   </div>
 
@@ -45,7 +35,6 @@
 
   <!-- Otras pantallas: Cómo Jugar y Créditos -->
   <div *ngIf="pantalla === 'comoJugar' && !mostrarMenu">
-    <h2>{{ "yonunca.tituloComoJugar" | translate }}</h2>
     <!-- Contenido de cómo jugar -->
     <div class="credits-container">
       <h1>{{ "yonunca.tituloComoJugar" | translate }}</h1>
@@ -113,22 +102,24 @@
         <h2>{{ "yonunca.agradecimientos_titulo" | translate }}</h2>
         <p>
           {{ "yonunca.agradecimientos_contenido_1" | translate }}
-          <a
-            href="{{ 'yonunca.agradecimientos_link_1' | translate }}"
-            alt="Link a agencia de marketing online en Tomelloso"
-            target="_blank"
-            >{{ "yonunca.agradecimientos_link_1" | translate }}</a
-          >
+          <a href="{{ 'yonunca.agradecimientos_link_1' | translate }}"
+            alt="Link a agencia de marketing online en Tomelloso" target="_blank">{{ "yonunca.agradecimientos_link_1" |
+            translate }}</a>
         </p>
         <p>
-          <a
-            href="{{ 'yonunca.agradecimientos_contenido_2' | translate }}"
-            target="_blank"
-            >{{ "yonunca.agradecimientos_contenido_2" | translate }}</a
-          >
+          <a href="{{ 'yonunca.agradecimientos_contenido_2' | translate }}" target="_blank">{{
+            "yonunca.agradecimientos_contenido_2" | translate }}</a>
         </p>
       </div>
     </div>
     <!-- Contenido de créditos -->
   </div>
+  <div style="position: fixed; width: 100%; bottom: 0px; height: 100px;" (touchmove)="exitGallery()"
+    *ngIf=" checkScreenSize()">
+    <div class="iphone-bar">
+      <div class="button"></div>
+    </div>
+  </div>
+  <div style="height: 400px;"></div>
+
 </div>
